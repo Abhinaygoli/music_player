@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="./music.css" rel="stylesheet"/>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./music.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0f1c3d7b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="root">
+        <div id="music-container">
+            <div id="player-section">
+                <audio id="playing0">
+                    <source src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3"/>
+                </audio>
+                <img src="https://m.media-amazon.com/images/I/81mNRm3F6KL._SS500_.jpg"
+                class="audioCoverImage" />
+                <div class="progress-wrapper">
+                    <div id="progress-bar0" class="progress-bar">
+
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="play-button size" title="shuffle" id="shuffle0" onclick="shuffle(0)">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                    <div class="play-button size" title="previoussong" id="back0" onclick="back(0)">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="play-button font-size"  id="play0" onclick="play(0)">
+                        <i class="far fa-play-circle" id="playAndPause0"></i>
+                    </div>
+                    <div class="play-button size" title="nextsong" id="next0" onclick="next(0)">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="play-button size" title="repeat" id="repeat0" onclick="repeat(0)">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="track">Without You</h3>
+                    <p class="artist">Avicii</p>
+                </div>
+            </div>
+            <div id="player-list-section">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./music.js"></script>
+</body>
+</html>
