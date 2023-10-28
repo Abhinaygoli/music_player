@@ -5,7 +5,6 @@ var gettingElementsInLocal = JSON.parse(localStorage.getItem("audio"))
 $.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist",function(response){
     var audiosList = response
     localStorage.setItem("audio",JSON.stringify(audiosList))
-
     for(var i = 0 ; i < audiosList.length ; i++){
         playerListSectionElement.innerHTML +=`
                 <div class="audio-mini-section" id=${i} onclick="clickedOnAudioFile(${i})">
